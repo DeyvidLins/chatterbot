@@ -1,0 +1,35 @@
+blis==0.4.1
+catalogue==1.0.0
+certifi==2020.6.20
+chardet==3.0.4
+ChatterBot==1.0.2
+chatterbot-corpus==1.2.0
+click==7.1.2
+cymem==2.0.3
+idna==2.10
+joblib==0.17.0
+mathparse==0.1.2
+murmurhash==1.0.2
+nltk==3.5
+numpy==1.19.2
+packaging==20.4
+Pint==0.16.1
+plac==0.9.6
+preshed @ file:///C:/Users/Deyvid/Desktop/chatterbot/preshed-3.0.2-cp38-cp38-win_amd64.whl
+PyAudio @ file:///C:/Users/Deyvid/Desktop/chatterbot/PyAudio-0.2.11-cp38-cp38-win_amd64.whl
+pymongo==3.11.0
+pyparsing==2.4.7
+python-dateutil==2.7.5
+pytz==2020.1
+PyYAML==3.13
+regex==2020.10.15
+requests==2.24.0
+six==1.15.0
+spacy @ file:///C:/Users/Deyvid/Desktop/chatterbot/spacy-2.1.8-cp38-cp38-win_amd64.whl
+SpeechRecognition==3.8.1
+SQLAlchemy==1.2.19
+srsly==1.0.2
+thinc @ file:///C:/Users/Deyvid/Desktop/chatterbot/thinc-7.4.1-cp38-cp38-win_amd64.whl
+tqdm==4.50.2
+urllib3==1.25.10
+wasabi==0.8.0
