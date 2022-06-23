@@ -3,15 +3,13 @@ from chatterbot import ChatBot
 import speech_recognition as sr # Speech regocnition
 # speech synthesis
 import pyttsx3
-import  funcoes_extra_ia
+import funcoes_extra_ia
 from os import walk
-
 
 bot = ChatBot('Dulce')
 
 trainer = ListTrainer(bot)
 speak = pyttsx3.init('sapi5')
-
 
 def Speak(text):
     speak.say(text)
@@ -23,7 +21,6 @@ lista = []
 for item in arquivo.readlines():
     i = item.replace('\n', '')
     lista.append(i)
-
 
 trainer.train(lista)
 
@@ -41,18 +38,32 @@ with sr.Microphone() as fonte:
     print('Aguardando você falar em posso ajudar: ')
 
     qtd_falha_audio = 0 #Contador de falhas no Áudio
+    arquivo_programa = open("nome-programas.txt", "w")
+    lista_arquivo_programa = []
 
     #Loop para continuar interagindo com o usuário
     while True:
         print('Diga algo: ')
-        audio = microfone.listen(fonte)  #Esculta o que o usuário vai falar
+        audio = microfone.listen(fonte)  #Ouve o que o usuário vai falar
 
         try:
-
-            texto = microfone.recognize_google(audio, language='pt-BR') #Reconhece o audio/voz do usuário
+            texto = microfone.recognize_google(audio, language='pt-BR') # Reconhece o audio/voz do usuário em português
             print('Você disse: ' + texto.capitalize())
 
-            if (texto.capitalize()) or (texto.upper()) or (texto.lower()) or (texto.title())  in lista:
+
+            arquivo_programa.write(f'{texto}\n') # Inserção da frase, para depois procurar o nome do programa
+
+            resposta = texto.replace(f"{texto[:6]}","Abrindo ") # Recebe o texto e muda à primeira frase
+            arquivo_programa.write(f'{resposta}\n')
+            arquivo_programa.close()
+
+            arquivo_programa = open("nome-programas.txt", "r")
+            for frase in arquivo_programa.readlines():
+                lista_arquivo_programa.append(frase.replace("\n",""))
+
+            trainer.train(lista_arquivo_programa) # Novo treinamento - Recebe à lista dos nomes dos programas como parâmetro
+
+            if (texto.capitalize()) or (texto.upper()) or (texto.lower()) or (texto.title()) in lista:
                  response = bot.get_response(texto)
                  print('Bot: ', response)
                  Speak(response)

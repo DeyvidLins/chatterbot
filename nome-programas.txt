@@ -1,0 +1,54 @@
+Windows NT
+Wondershare
+CCleaner
+Windows Portable Devices
+Windows Media Player
+Windows Sidebar
+Tenorshare
+Java
+Steam
+TeamViewer
+desktop.ini
+Typora
+Google
+360
+WindowsPowerShell
+MSBuild
+Windows Mail
+Uninstall Information
+obs-studio
+Windows Photo Viewer
+WinMerge
+Microsoft Office
+DB Browser for SQLite
+Mozilla Maintenance Service
+Nox
+SketchUp
+nodejs
+Qt Designer
+Wireshark
+Npcap
+JetBrains
+Arquivos Comuns
+Git
+Common Files
+Windows Multimedia Platform
+Windows Security
+Intel
+Mozilla Firefox
+Microsoft Office 15
+NARUTO SHIPPUDEN Ultimate Ninja STORM 4 Road to Boruto Next Generations
+Android
+Microsoft.NET
+Reference Assemblies
+Microsoft
+Internet Explorer
+WindowsApps
+InstallShield Installation Information
+Avast Software
+Adobe
+Oracle
+WinRAR
+ModifiableWindowsApps
+Windows Defender
+Notepad++
