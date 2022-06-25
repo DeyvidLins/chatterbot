@@ -1,9 +1,9 @@
 from chatterbot.trainers import ListTrainer
 from chatterbot import ChatBot
-import speech_recognition as sr # Speech regocnition
-# speech synthesis
+import speech_recognition as sr
 import pyttsx3
-import funcoes_extra_ia
+import arquivos_temp
+import invoca_acoes_ia
 from os import walk
 
 bot = ChatBot('Dulce')
@@ -38,8 +38,6 @@ with sr.Microphone() as fonte:
     print('Aguardando você falar em posso ajudar: ')
 
     qtd_falha_audio = 0 #Contador de falhas no Áudio
-    arquivo_programa = open("nome-programas.txt", "w")
-    lista_arquivo_programa = []
 
     #Loop para continuar interagindo com o usuário
     while True:
@@ -50,24 +48,15 @@ with sr.Microphone() as fonte:
             texto = microfone.recognize_google(audio, language='pt-BR') # Reconhece o audio/voz do usuário em português
             print('Você disse: ' + texto.capitalize())
 
+            programas = arquivos_temp.criacao_arquivo_temporario_treinamento_ia(texto) # chama o método que é responsável pela criação do arquivos para um novo treinamento da IA
 
-            arquivo_programa.write(f'{texto}\n') # Inserção da frase, para depois procurar o nome do programa
-
-            resposta = texto.replace(f"{texto[:6]}","Abrindo ") # Recebe o texto e muda à primeira frase
-            arquivo_programa.write(f'{resposta}\n')
-            arquivo_programa.close()
-
-            arquivo_programa = open("nome-programas.txt", "r")
-            for frase in arquivo_programa.readlines():
-                lista_arquivo_programa.append(frase.replace("\n",""))
-
-            trainer.train(lista_arquivo_programa) # Novo treinamento - Recebe à lista dos nomes dos programas como parâmetro
+            trainer.train(programas)  # Novo treinamento - Recebe à lista dos nomes dos programas como parâmetro
 
             if (texto.capitalize()) or (texto.upper()) or (texto.lower()) or (texto.title()) in lista:
                  response = bot.get_response(texto)
                  print('Bot: ', response)
                  Speak(response)
-                 funcoes_extra_ia.function(texto)
+                 invoca_acoes_ia.invoke_acoes(texto)
                  continue
 
             else:
@@ -75,17 +64,16 @@ with sr.Microphone() as fonte:
                 print('Bot: ', response)
                 Speak(response)
 
-            if qtd_falha_audio == 3:  # Contabiliza à quatidade de vezes que recebeu o valor nulo(Houve falha de comunição entre o usuário e a I.A) e encerra à conversação
-                response = bot.get_response("audio ruim")
-                print('Bot: ', response)
-                Speak(response)
-                break
-
         except sr.UnknownValueError:
             texto = 'null'
             qtd_falha_audio+=1
-            response = bot.get_response(texto) #Caso o ambiente tenha ruído ou o usuário não diga nada, à I.A recebe um valor nulo.
+            response = bot.get_response(texto) # Caso o ambiente tenha ruído ou o usuário não diga nada, à I.A recebe um valor nulo.
             print('Bot: ', response)
             Speak(response)
 
+            if qtd_falha_audio == 3:  # Contabiliza à quatidade de vezes que recebeu o valor nulo(Houve falha de comunição entre o usuário e a I.A) e encerra à conversação
+                response = bot.get_response("Audio ruim")
+                print('Bot: ', response)
+                Speak(response)
+                break
 
