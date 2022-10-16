@@ -1,0 +1,53 @@
+DB Browser for SQLite
+Reference Assemblies
+Tenorshare
+nodejs
+Microsoft
+Mozilla Maintenance Service
+Qt Designer
+Java
+TeamViewer
+Microsoft.NET
+ModifiableWindowsApps
+Common Files
+Windows Multimedia Platform
+WindowsPowerShell
+Wireshark
+360
+Npcap
+WinMerge
+Internet Explorer
+obs-studio
+NARUTO SHIPPUDEN Ultimate Ninja STORM 4 Road to Boruto Next Generations
+InstallShield Installation Information
+Notepad++
+Microsoft Office 15
+Microsoft Office
+SketchUp
+Windows Media Player
+Windows Sidebar
+Windows Mail
+Nox
+Oracle
+Uninstall Information
+Windows Photo Viewer
+Arquivos Comuns
+Windows Security
+Intel
+Wondershare
+JetBrains
+Windows Defender
+Windows NT
+MSBuild
+WindowsApps
+Windows Portable Devices
+Google
+WinRAR
+Adobe
+CCleaner
+desktop.ini
+Typora
+Steam
+Git
+Mozilla Firefox
+Android
