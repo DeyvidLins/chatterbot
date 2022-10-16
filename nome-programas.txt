@@ -1,54 +1,53 @@
-360
-Mozilla Firefox
-Google
-desktop.ini
-obs-studio
-Windows Security
-Windows Defender
-Wondershare
-Intel
-Microsoft Office 15
-Windows Portable Devices
-Reference Assemblies
-Notepad++
-TeamViewer
-Windows NT
-Arquivos Comuns
-JetBrains
-Windows Media Player
-WinMerge
-Microsoft Office
-Android
-MSBuild
-Windows Multimedia Platform
-ModifiableWindowsApps
-WinRAR
-Windows Mail
-Mozilla Maintenance Service
-Nox
-Qt Designer
-Steam
-Oracle
-Common Files
-Git
-Windows Sidebar
-WindowsApps
-SketchUp
-Java
-CCleaner
-nodejs
-Npcap
-Typora
-Adobe
-Wireshark
 DB Browser for SQLite
-Windows Photo Viewer
-Internet Explorer
-Microsoft
-InstallShield Installation Information
-Microsoft.NET
-Avast Software
-WindowsPowerShell
+Reference Assemblies
 Tenorshare
-Uninstall Information
+nodejs
+Microsoft
+Mozilla Maintenance Service
+Qt Designer
+Java
+TeamViewer
+Microsoft.NET
+ModifiableWindowsApps
+Common Files
+Windows Multimedia Platform
+WindowsPowerShell
+Wireshark
+360
+Npcap
+WinMerge
+Internet Explorer
+obs-studio
 NARUTO SHIPPUDEN Ultimate Ninja STORM 4 Road to Boruto Next Generations
+InstallShield Installation Information
+Notepad++
+Microsoft Office 15
+Microsoft Office
+SketchUp
+Windows Media Player
+Windows Sidebar
+Windows Mail
+Nox
+Oracle
+Uninstall Information
+Windows Photo Viewer
+Arquivos Comuns
+Windows Security
+Intel
+Wondershare
+JetBrains
+Windows Defender
+Windows NT
+MSBuild
+WindowsApps
+Windows Portable Devices
+Google
+WinRAR
+Adobe
+CCleaner
+desktop.ini
+Typora
+Steam
+Git
+Mozilla Firefox
+Android

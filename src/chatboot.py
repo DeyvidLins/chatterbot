@@ -48,9 +48,9 @@ with sr.Microphone() as fonte:
             texto = microfone.recognize_google(audio, language='pt-BR') # Reconhece o audio/voz do usuário em português
             print('Você disse: ' + texto.capitalize())
 
-            programas = arquivos_temp.criacao_arquivo_temporario_treinamento_ia(texto) # chama o método que é responsável pela criação do arquivos para um novo treinamento da IA
+            criacao_arquivo_temp = arquivos_temp.criacao_arquivo_temporario_treinamento_ia(texto) # chama o método que é responsável pela criação do arquivos para um novo treinamento da IA
 
-            trainer.train(programas)  # Novo treinamento - Recebe à lista dos nomes dos programas como parâmetro
+            trainer.train(criacao_arquivo_temp)  # Novo treinamento - Recebe à lista que foi criada no script arquivos_temp.py
 
             if (texto.capitalize()) or (texto.upper()) or (texto.lower()) or (texto.title()) in lista:
                  response = bot.get_response(texto)

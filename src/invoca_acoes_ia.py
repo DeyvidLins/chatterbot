@@ -2,6 +2,7 @@ import direciona_sites
 import reconhecimento_rosto
 import inicia_programas
 import agenda_horario
+import previsao_tempo
 
 # Invoca às classes e as ações dela
 def invoke_acoes(texto):
@@ -20,3 +21,8 @@ def invoke_acoes(texto):
     # Chama à classe Agenda
     agenda = agenda_horario.Agenda(texto)
     agenda.verificar_horario()
+
+    # Chama à classe Previsão Tempo
+    previsao = previsao_tempo.PrevisaoTempo(texto)
+    previsao.informar_previsao()
+
